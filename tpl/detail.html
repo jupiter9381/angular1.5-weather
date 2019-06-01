@@ -1,0 +1,27 @@
+<div ng-controller="WeatherDetailController">	
+	
+	<div class="container">
+		<h3>City: {{City}}</h3>
+	</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="img_th"></th>
+				<th>Date</th>
+				<th>Temperature</th>
+				<th>Max Temperature</th>
+				<th>Min Temperature</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in weathers">
+				<td><img class="weather_img" src="/img/{{item.status}}"></td>
+				<td>{{item.date}}</td>
+				<td>{{item.temperature}}</td>
+				<td>{{item.maximum}}</td>
+				<td>{{item.minimum}}</td>
+			</tr>
+		</tbody>
+	</table>
+		
+</div>
